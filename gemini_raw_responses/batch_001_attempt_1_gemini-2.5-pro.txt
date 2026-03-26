@@ -1,0 +1,702 @@
+```json
+[
+  {
+    "id": 1,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      8
+    ],
+    "exact_script_text": "le séisme qui a ouvert la terre",
+    "text_translated": "le séisme qui a ouvert la terre",
+    "notes": "wrapper_stripped"
+  },
+  {
+    "id": 2,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      37
+    ],
+    "exact_script_text": "le passé violent des champs phlégréens",
+    "text_translated": "le passé violent des champs phlégréens",
+    "notes": "wrapper_stripped"
+  },
+  {
+    "id": 3,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      63
+    ],
+    "exact_script_text": "un cycle d instabilité",
+    "text_translated": "un cycle d instabilité",
+    "notes": "wrapper_stripped,contextual_fallback_missing_lowerthird"
+  },
+  {
+    "id": 4,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      96
+    ],
+    "exact_script_text": "la connexion devient réalité",
+    "text_translated": "la connexion devient réalité",
+    "notes": "wrapper_stripped"
+  },
+  {
+    "id": 5,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      130
+    ],
+    "exact_script_text": "le réveil de l ancien super système",
+    "text_translated": "le réveil de l ancien super système",
+    "notes": "wrapper_stripped,contextual_fallback_missing_lowerthird"
+  },
+  {
+    "id": 6,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      158
+    ],
+    "exact_script_text": "la crise humaine",
+    "text_translated": "la crise humaine",
+    "notes": "wrapper_stripped"
+  },
+  {
+    "id": 7,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      194,
+      196
+    ],
+    "exact_script_text": "le premier domino",
+    "text_translated": "le premier domino",
+    "notes": ""
+  },
+  {
+    "id": 8,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      10
+    ],
+    "exact_script_text": "13 mars 2025",
+    "text_translated": "13 mars 2025",
+    "notes": ""
+  },
+  {
+    "id": 9,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      17
+    ],
+    "exact_script_text": "54 000 microséismes",
+    "text_translated": "54000 microséismes",
+    "notes": ""
+  },
+  {
+    "id": 10,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      28
+    ],
+    "exact_script_text": "le docteur tatiana ventura",
+    "text_translated": "le docteur tatiana ventura",
+    "notes": ""
+  },
+  {
+    "id": 11,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      43
+    ],
+    "exact_script_text": "plus de 200 kilomètres cubes",
+    "text_translated": "plus de 200 kilomètres cubes",
+    "notes": ""
+  },
+  {
+    "id": 12,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      46
+    ],
+    "exact_script_text": "quinze mille ans plus tard",
+    "text_translated": "15000 ans plus tard",
+    "notes": ""
+  },
+  {
+    "id": 13,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      51
+    ],
+    "exact_script_text": "le dr giuseppe mastrolorenzo",
+    "text_translated": "le dr giuseppe mastrolorenzo",
+    "notes": ""
+  },
+  {
+    "id": 14,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      75
+    ],
+    "exact_script_text": "1982 1984",
+    "text_translated": "1982 1984",
+    "notes": ""
+  },
+  {
+    "id": 15,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      75
+    ],
+    "exact_script_text": "16 000 séismes",
+    "text_translated": "16000 séismes",
+    "notes": ""
+  },
+  {
+    "id": 16,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      89
+    ],
+    "exact_script_text": "1950",
+    "text_translated": "1950",
+    "notes": ""
+  },
+  {
+    "id": 17,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      89
+    ],
+    "exact_script_text": "4 3 mètres",
+    "text_translated": "4 3 mètres",
+    "notes": ""
+  },
+  {
+    "id": 18,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      91
+    ],
+    "exact_script_text": "2 centimètres par mois",
+    "text_translated": "2 centimètres par mois",
+    "notes": ""
+  },
+  {
+    "id": 19,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      92
+    ],
+    "exact_script_text": "augmentation de 340",
+    "text_translated": "augmentation de 340",
+    "notes": ""
+  },
+  {
+    "id": 20,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      100
+    ],
+    "exact_script_text": "12 degrés celsius",
+    "text_translated": "12 degrés celsius",
+    "notes": ""
+  },
+  {
+    "id": 21,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      115
+    ],
+    "exact_script_text": "éruption de 1944",
+    "text_translated": "éruption de 1944",
+    "notes": ""
+  },
+  {
+    "id": 22,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      134
+    ],
+    "exact_script_text": "mars 2025",
+    "text_translated": "mars 2025",
+    "notes": ""
+  },
+  {
+    "id": 23,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      141
+    ],
+    "exact_script_text": "il y a 39 000 ans",
+    "text_translated": "il y a 39000 ans",
+    "notes": ""
+  },
+  {
+    "id": 24,
+    "matched": false,
+    "source_chunk_numbers_dubbed": [],
+    "exact_script_text": "empty",
+    "text_translated": "empty",
+    "notes": "no_candidates"
+  },
+  {
+    "id": 25,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      5
+    ],
+    "exact_script_text": "deux volcans que l on croyait autrefois indépendants",
+    "text_translated": "2 volcans que l on croyait autrefois indépendants",
+    "notes": ""
+  },
+  {
+    "id": 26,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      10
+    ],
+    "exact_script_text": "séisme de magnitude 4 4",
+    "text_translated": "séisme de magnitude 4 4",
+    "notes": ""
+  },
+  {
+    "id": 27,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      15
+    ],
+    "exact_script_text": "université de stanford",
+    "text_translated": "université de stanford",
+    "notes": ""
+  },
+  {
+    "id": 28,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      19
+    ],
+    "exact_script_text": "la caldeira ne se contentait pas de trembler",
+    "text_translated": "la caldeira ne se contentait pas de trembler",
+    "notes": "contextual_fallback_missing_lowerthird"
+  },
+  {
+    "id": 29,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      20
+    ],
+    "exact_script_text": "elle était en train de se désagréger de l intérieur",
+    "text_translated": "elle était en train de se désagréger de l intérieur",
+    "notes": "contextual_fallback_missing_lowerthird"
+  },
+  {
+    "id": 30,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      22
+    ],
+    "exact_script_text": "les scientifiques croyaient endormi depuis des siècles",
+    "text_translated": "les scientifiques croyaient endormi depuis des siècles",
+    "notes": ""
+  },
+  {
+    "id": 31,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      27
+    ],
+    "exact_script_text": "le vésuve",
+    "text_translated": "le vésuve",
+    "notes": ""
+  },
+  {
+    "id": 32,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      32
+    ],
+    "exact_script_text": "le sceau était rompu",
+    "text_translated": "le sceau était rompu",
+    "notes": ""
+  },
+  {
+    "id": 33,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      35
+    ],
+    "exact_script_text": "c était la déstabilisation systémique",
+    "text_translated": "c était la déstabilisation systémique",
+    "notes": ""
+  },
+  {
+    "id": 34,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      42
+    ],
+    "exact_script_text": "l éruption de l ignimbrite campanienne il y a 39 000 ans",
+    "text_translated": "l éruption de l ignimbrite campanienne il y a 39000 ans",
+    "notes": ""
+  },
+  {
+    "id": 35,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      45
+    ],
+    "exact_script_text": "les couches de cendres de cette explosion ont atteint l europe de l est",
+    "text_translated": "les couches de cendres de cette explosion ont atteint l europe de l est",
+    "notes": ""
+  },
+  {
+    "id": 36,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      46
+    ],
+    "exact_script_text": "l éruption du tuf jaune napolitain",
+    "text_translated": "l éruption du tuf jaune napolitain",
+    "notes": ""
+  },
+  {
+    "id": 37,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      53
+    ],
+    "exact_script_text": "les chambres magmatiques se situent entre 3 et 8 kilomètres de profondeur",
+    "text_translated": "les chambres magmatiques se situent entre 3 et 8 kilomètres de profondeur",
+    "notes": ""
+  },
+  {
+    "id": 38,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      70
+    ],
+    "exact_script_text": "le magma et des fluides surchauffés qui se frayent un chemin vers le haut",
+    "text_translated": "le magma et des fluides surchauffés qui se frayent un chemin vers le haut",
+    "notes": "contextual_fallback_missing_lowerthird"
+  },
+  {
+    "id": 39,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      72
+    ],
+    "exact_script_text": "partiellement immergés",
+    "text_translated": "partiellement immergés",
+    "notes": ""
+  },
+  {
+    "id": 40,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      80
+    ],
+    "exact_script_text": "co2",
+    "text_translated": "co2",
+    "notes": ""
+  },
+  {
+    "id": 41,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      81
+    ],
+    "exact_script_text": "so2",
+    "text_translated": "so2",
+    "notes": ""
+  },
+  {
+    "id": 42,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      81
+    ],
+    "exact_script_text": "sulfure d hydrogène",
+    "text_translated": "sulfure d hydrogène",
+    "notes": ""
+  },
+  {
+    "id": 43,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      85
+    ],
+    "exact_script_text": "les anomalies thermiques",
+    "text_translated": "les anomalies thermiques",
+    "notes": ""
+  },
+  {
+    "id": 44,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      94
+    ],
+    "exact_script_text": "il ne s agissait plus seulement du cycle suivant",
+    "text_translated": "il ne s agissait plus seulement du cycle suivant",
+    "notes": ""
+  },
+  {
+    "id": 45,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      112
+    ],
+    "exact_script_text": "il ne s agissait pas d une activité hydrothermale superficielle",
+    "text_translated": "il ne s agissait pas d une activité hydrothermale superficielle",
+    "notes": ""
+  },
+  {
+    "id": 46,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      120
+    ],
+    "exact_script_text": "pour la première fois de l histoire",
+    "text_translated": "pour la première fois de l histoire",
+    "notes": ""
+  },
+  {
+    "id": 47,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      121
+    ],
+    "exact_script_text": "les champs phlégréens et le vésuve",
+    "text_translated": "les champs phlégréens et le vésuve",
+    "notes": ""
+  },
+  {
+    "id": 48,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      123
+    ],
+    "exact_script_text": "l imagerie thermique a rapidement confirmé leurs craintes",
+    "text_translated": "l imagerie thermique a rapidement confirmé leurs craintes",
+    "notes": ""
+  },
+  {
+    "id": 49,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      131
+    ],
+    "exact_script_text": "les champs phlégréens",
+    "text_translated": "les champs phlégréens",
+    "notes": ""
+  },
+  {
+    "id": 50,
+    "matched": false,
+    "source_chunk_numbers_dubbed": [],
+    "exact_script_text": "empty",
+    "text_translated": "empty",
+    "notes": "no_candidates"
+  },
+  {
+    "id": 51,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      143
+    ],
+    "exact_script_text": "ce qui entrait en éruption aux champs phlégréens résonnait jusqu aux évents lointains",
+    "text_translated": "ce qui entrait en éruption aux champs phlégréens résonnait jusqu aux évents lointains",
+    "notes": ""
+  },
+  {
+    "id": 52,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      149
+    ],
+    "exact_script_text": "risques distincts",
+    "text_translated": "risques distincts",
+    "notes": ""
+  },
+  {
+    "id": 53,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      152
+    ],
+    "exact_script_text": "deux volcans historiquement dévastateurs",
+    "text_translated": "2 volcans historiquement dévastateurs",
+    "notes": ""
+  },
+  {
+    "id": 54,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      159
+    ],
+    "exact_script_text": "plus de 3 5 millions de personnes",
+    "text_translated": "plus de 3.5 millions de personnes",
+    "notes": ""
+  },
+  {
+    "id": 55,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      162
+    ],
+    "exact_script_text": "les cafés servent des espressos",
+    "text_translated": "les cafés servent des espressos",
+    "notes": ""
+  },
+  {
+    "id": 56,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      162
+    ],
+    "exact_script_text": "les ferries traversent la baie",
+    "text_translated": "les ferries traversent la baie",
+    "notes": ""
+  },
+  {
+    "id": 57,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      163
+    ],
+    "exact_script_text": "les enfants marchent vers l école",
+    "text_translated": "les enfants marchent vers l école",
+    "notes": ""
+  },
+  {
+    "id": 58,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      165
+    ],
+    "exact_script_text": "le sol tremble plus souvent",
+    "text_translated": "le sol tremble plus souvent",
+    "notes": ""
+  },
+  {
+    "id": 59,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      166
+    ],
+    "exact_script_text": "de nouvelles fissures apparaissent dans les murs durant la nuit",
+    "text_translated": "de nouvelles fissures apparaissent dans les murs durant la nuit",
+    "notes": ""
+  },
+  {
+    "id": 60,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      169
+    ],
+    "exact_script_text": "la connexion de mars 2025",
+    "text_translated": "la connexion de mars 2025",
+    "notes": ""
+  },
+  {
+    "id": 61,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      185
+    ],
+    "exact_script_text": "des simulations atmosphériques",
+    "text_translated": "des simulations atmosphériques",
+    "notes": ""
+  },
+  {
+    "id": 62,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      192,
+      193
+    ],
+    "exact_script_text": "le temps passe et la pression continue de s accumuler",
+    "text_translated": "le temps passe et la pression continue de s accumuler",
+    "notes": ""
+  },
+  {
+    "id": 63,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      195
+    ],
+    "exact_script_text": "agences de secours européennes",
+    "text_translated": "agences de secours européennes",
+    "notes": ""
+  },
+  {
+    "id": 64,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      196
+    ],
+    "exact_script_text": "le premier domino",
+    "text_translated": "le premier domino",
+    "notes": ""
+  },
+  {
+    "id": 65,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      200
+    ],
+    "exact_script_text": "l etna en sicile",
+    "text_translated": "l etna en sicile",
+    "notes": ""
+  },
+  {
+    "id": 66,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      200
+    ],
+    "exact_script_text": "le stromboli sur la côte tyrrhénienne",
+    "text_translated": "le stromboli sur la côte tyrrhénienne",
+    "notes": ""
+  },
+  {
+    "id": 67,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      201
+    ],
+    "exact_script_text": "la célèbre caldeira de santorin dans la mer égée",
+    "text_translated": "la célèbre caldeira de santorin dans la mer égée",
+    "notes": ""
+  },
+  {
+    "id": 68,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      211
+    ],
+    "exact_script_text": "un événement volcanique en cascade d une ampleur inédite depuis la préhistoire",
+    "text_translated": "un événement volcanique en cascade d une ampleur inédite depuis la préhistoire",
+    "notes": ""
+  },
+  {
+    "id": 69,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      216
+    ],
+    "exact_script_text": "son ampleur",
+    "text_translated": "son ampleur",
+    "notes": ""
+  },
+  {
+    "id": 70,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      27
+    ],
+    "exact_script_text": "vésuve",
+    "text_translated": "vésuve",
+    "notes": ""
+  }
+]
+```

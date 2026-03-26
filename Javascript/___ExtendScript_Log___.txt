@@ -1,0 +1,18 @@
+[Thu Feb 12 2026 12:34:34 GMT+0500] Wrote trigger: C:/media-encoder-validation/_trigger_encoder__.json
+[Thu Feb 12 2026 12:34:34 GMT+0500] === SEND TO AME START ===
+[Thu Feb 12 2026 12:34:34 GMT+0500] ConfigPath: \\wsl.localhost\Ubuntu-22.04\home\vvruntime\viralverse-dubbing-automation\Javascript/run_config.json
+[Thu Feb 12 2026 12:34:34 GMT+0500] WaitBeforeQuitSeconds: 40
+[Thu Feb 12 2026 12:34:34 GMT+0500] FAILED: Error: Config file not found: \\wsl.localhost\Ubuntu-22.04\home\vvruntime\viralverse-dubbing-automation\Javascript/run_config.json
+[Thu Feb 12 2026 12:34:34 GMT+0500] Wrote validation: \\wsl.localhost\Ubuntu-22.04\home\vvruntime\viralverse-dubbing-automation\Javascript/premiere_validation.json
+[Thu Feb 12 2026 12:34:40 GMT+0500] Wrote trigger: C:/media-encoder-validation/_trigger_encoder__.json
+[Thu Feb 12 2026 12:34:40 GMT+0500] === SEND TO AME START ===
+[Thu Feb 12 2026 12:34:40 GMT+0500] ConfigPath: \\wsl.localhost\Ubuntu-22.04\home\vvruntime\viralverse-dubbing-automation\Javascript/run_config.json
+[Thu Feb 12 2026 12:34:40 GMT+0500] WaitBeforeQuitSeconds: 40
+[Thu Feb 12 2026 12:34:40 GMT+0500] FAILED: Error: Config file not found: \\wsl.localhost\Ubuntu-22.04\home\vvruntime\viralverse-dubbing-automation\Javascript/run_config.json
+[Thu Feb 12 2026 12:34:40 GMT+0500] Validation already exists, skipping write: \\wsl.localhost\Ubuntu-22.04\home\vvruntime\viralverse-dubbing-automation\Javascript/premiere_validation.json
+[Thu Feb 12 2026 12:35:14 GMT+0500] Wrote trigger: C:/media-encoder-validation/_trigger_encoder__.json
+[Thu Feb 12 2026 12:35:14 GMT+0500] === SEND TO AME START ===
+[Thu Feb 12 2026 12:35:14 GMT+0500] ConfigPath: \\wsl.localhost\Ubuntu-22.04\home\vvruntime\viralverse-dubbing-automation\Javascript/run_config.json
+[Thu Feb 12 2026 12:35:14 GMT+0500] WaitBeforeQuitSeconds: 40
+[Thu Feb 12 2026 12:35:14 GMT+0500] FAILED: Error: Config file not found: \\wsl.localhost\Ubuntu-22.04\home\vvruntime\viralverse-dubbing-automation\Javascript/run_config.json
+[Thu Feb 12 2026 12:35:14 GMT+0500] Validation already exists, skipping write: \\wsl.localhost\Ubuntu-22.04\home\vvruntime\viralverse-dubbing-automation\Javascript/premiere_validation.json

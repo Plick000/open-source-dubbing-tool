@@ -1,0 +1,8 @@
+Gemini CLI Error. {
+  "session_id": "39fb31e9-73aa-4a4f-9bfe-694ec1f417ce",
+  "error": {
+    "type": "Error",
+    "message": "Please set an Auth method in your /mnt/c/__tools/gemini/.gemini/settings.json or specify one of the following environment variables before running: GEMINI_API_KEY, GOOGLE_GENAI_USE_VERTEXAI, GOOGLE_GENAI_USE_GCA",
+    "code": 41
+  }
+}

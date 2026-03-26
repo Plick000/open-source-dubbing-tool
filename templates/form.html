@@ -1,0 +1,104 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Script ↔ Chunks Validator</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    body { font-family: 'Poppins', sans-serif; }
+    .loader { border: 3px solid #dadada; border-top: 3px solid #dc2626; border-radius: 50%; width: 24px; height: 24px; animation: spin 1s linear infinite; }
+    @keyframes spin { 0% { transform: rotate(0deg); } 100% { transform: rotate(360deg); } }
+  </style>
+</head>
+<body class="bg-gradient-to-br from-gray-50 to-white min-h-screen">
+  <div class="container mx-auto px-4 py-6 sm:py-12">
+    <div class="max-w-3xl mx-auto">
+
+      <div class="text-center mb-8 sm:mb-12">
+        <h1 class="text-3xl sm:text-4xl md:text-5xl font-bold text-red-900 mb-3">Script ↔ Chunks Validator</h1>
+        <p class="text-red-700 text-sm sm:text-base">Checks only: script.txt + chunks.txt (strict word equality, punctuation-insensitive)</p>
+      </div>
+
+      <div class="bg-white rounded-2xl shadow-2xl p-6 sm:p-8 md:p-10 border-2 border-red-100">
+        <form action="/process" method="post" enctype="multipart/form-data" id="validatorForm">
+
+          <div class="mb-6 sm:mb-8">
+            <label class="block text-base sm:text-lg font-semibold text-red-900 mb-3">Browse Folder (Recommended)</label>
+            <input type="file" name="folder_files" id="folder_files" webkitdirectory directory multiple
+              class="w-full px-4 py-3 sm:py-4 border-2 border-red-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200 hover:border-red-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-red-50 file:text-red-700 hover:file:bg-red-100 cursor-pointer text-sm sm:text-base" />
+            <p class="mt-2 sm:mt-3 text-xs sm:text-sm text-red-600 bg-red-50 p-3 rounded-lg">
+              <span class="font-medium">Put these files in the folder:</span> chunks.txt, script.txt
+            </p>
+          </div>
+
+          <div class="my-6 border-t border-red-100"></div>
+
+          <div class="mb-2">
+            <h3 class="text-base sm:text-lg font-bold text-red-900">Manual Upload (Backup)</h3>
+            <p class="text-xs sm:text-sm text-red-700 mt-1">Use only if folder upload is not used.</p>
+          </div>
+
+          <div class="mb-6 sm:mb-8">
+            <label class="block text-base sm:text-lg font-semibold text-red-900 mb-3">chunks.txt</label>
+            <input type="file" name="chunks_txt" accept=".txt,text/plain"
+              class="w-full px-4 py-3 sm:py-4 border-2 border-red-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200 hover:border-red-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-red-50 file:text-red-700 hover:file:bg-red-100 cursor-pointer text-sm sm:text-base" />
+            <p class="mt-2 sm:mt-3 text-xs sm:text-sm text-red-600 bg-red-50 p-3 rounded-lg">
+              One chunk per line. Punctuation-only lines get merged into the previous chunk (same as your main app).
+            </p>
+          </div>
+
+          <div class="mb-8 sm:mb-10">
+            <label class="block text-base sm:text-lg font-semibold text-red-900 mb-3">script.txt (full translated script)</label>
+            <input type="file" name="script_txt" accept=".txt,text/plain"
+              class="w-full px-4 py-3 sm:py-4 border-2 border-red-200 rounded-xl focus:outline-none focus:ring-2 focus:ring-red-500 focus:border-transparent transition-all duration-200 hover:border-red-300 file:mr-4 file:py-2 file:px-4 file:rounded-lg file:border-0 file:text-sm file:font-semibold file:bg-red-50 file:text-red-700 hover:file:bg-red-100 cursor-pointer text-sm sm:text-base" />
+          </div>
+
+          <button type="submit" id="submitBtn"
+            class="w-full bg-gradient-to-r from-red-600 to-red-700 hover:from-red-700 hover:to-red-800 text-white font-bold py-4 sm:py-5 px-6 rounded-xl shadow-lg hover:shadow-xl transform hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus:ring-4 focus:ring-red-300 text-base sm:text-lg flex items-center justify-center gap-3">
+            <span id="btnText">Validate</span>
+            <span id="btnLoader" class="loader hidden"></span>
+          </button>
+        </form>
+      </div>
+
+      <div class="text-center mt-8 text-red-700 text-xs sm:text-sm">
+        <p>Strict validator for debugging chunk/script mismatches</p>
+      </div>
+
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById('validatorForm');
+    const submitBtn = document.getElementById('submitBtn');
+    const btnText = document.getElementById('btnText');
+    const btnLoader = document.getElementById('btnLoader');
+    const folderInput = document.getElementById('folder_files');
+
+    form.addEventListener('submit', function(e) {
+      const folderCount = (folderInput && folderInput.files) ? folderInput.files.length : 0;
+      const chunks = form.querySelector('input[name="chunks_txt"]');
+      const script = form.querySelector('input[name="script_txt"]');
+
+      const manualOk =
+        chunks && chunks.files && chunks.files.length > 0 &&
+        script && script.files && script.files.length > 0;
+
+      if (folderCount === 0 && !manualOk) {
+        e.preventDefault();
+        alert("Please either select the folder OR upload both files manually (chunks.txt + script.txt)." );
+        return;
+      }
+
+      submitBtn.disabled = true;
+      submitBtn.classList.add('opacity-75', 'cursor-not-allowed');
+      btnText.textContent = 'Processing...';
+      btnLoader.classList.remove('hidden');
+    });
+  </script>
+</body>
+</html>

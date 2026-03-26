@@ -1,0 +1,264 @@
+```json
+[
+  {
+    "id": 1,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      17
+    ],
+    "exact_script_text": "Broj 7. Zanzibarski leopard.",
+    "text_translated": "Broj 7. Zanzibarski leopard.",
+    "notes": ""
+  },
+  {
+    "id": 2,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      38
+    ],
+    "exact_script_text": "Broj 6. Slatkovodni dupin Baiji.",
+    "text_translated": "Broj 6. Slatkovodni dupin Baiji.",
+    "notes": ""
+  },
+  {
+    "id": 3,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      76
+    ],
+    "exact_script_text": "Broj 5. Žaba koja inkubira potomstvo u želucu.",
+    "text_translated": "Broj 5. Žaba koja inkubira potomstvo u želucu.",
+    "notes": ""
+  },
+  {
+    "id": 4,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      104
+    ],
+    "exact_script_text": "Broj 4. Schomburgkov jelen.",
+    "text_translated": "Broj 4. Schomburgkov jelen.",
+    "notes": ""
+  },
+  {
+    "id": 5,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      129
+    ],
+    "exact_script_text": "Broj 3. Moa.",
+    "text_translated": "Broj 3. Moa.",
+    "notes": ""
+  },
+  {
+    "id": 6,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      160
+    ],
+    "exact_script_text": "Broj 2. Istočna stepska kokoš.",
+    "text_translated": "Broj 2. Istočna stepska kokoš.",
+    "notes": ""
+  },
+  {
+    "id": 7,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      189
+    ],
+    "exact_script_text": "Broj 1. Toolache valabi.",
+    "text_translated": "Broj 1. Toolache valabi.",
+    "notes": ""
+  },
+  {
+    "id": 8,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      1
+    ],
+    "exact_script_text": "kamere",
+    "text_translated": "kamere",
+    "notes": ""
+  },
+  {
+    "id": 9,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      4
+    ],
+    "exact_script_text": "1800-ima",
+    "text_translated": "1800-ima",
+    "notes": ""
+  },
+  {
+    "id": 10,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      18
+    ],
+    "exact_script_text": "otoku Zanzibar",
+    "text_translated": "otoku Zanzibar",
+    "notes": ""
+  },
+  {
+    "id": 11,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      26
+    ],
+    "exact_script_text": "1960-ih",
+    "text_translated": "1960-ih",
+    "notes": ""
+  },
+  {
+    "id": 12,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      33
+    ],
+    "exact_script_text": "Godine 2003.",
+    "text_translated": "Godine 2003.",
+    "notes": ""
+  },
+  {
+    "id": 13,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      39
+    ],
+    "exact_script_text": "„Božicom Yangtzea“",
+    "text_translated": "„Božicom Yangtzea“",
+    "notes": ""
+  },
+  {
+    "id": 14,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      45
+    ],
+    "exact_script_text": "1950-ih",
+    "text_translated": "1950-ih",
+    "notes": ""
+  },
+  {
+    "id": 15,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      54
+    ],
+    "exact_script_text": "projekta Tri klanca",
+    "text_translated": "projekta 3 klanca",
+    "notes": ""
+  },
+  {
+    "id": 16,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      59
+    ],
+    "exact_script_text": "Qi Qi",
+    "text_translated": "Qi Qi",
+    "notes": ""
+  },
+  {
+    "id": 17,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      81
+    ],
+    "exact_script_text": "istočne Australije",
+    "text_translated": "istočne Australije",
+    "notes": ""
+  },
+  {
+    "id": 18,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      89
+    ],
+    "exact_script_text": "1970-ih",
+    "text_translated": "1970-ih",
+    "notes": ""
+  },
+  {
+    "id": 19,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      97
+    ],
+    "exact_script_text": "Kostarike",
+    "text_translated": "Kostarike",
+    "notes": ""
+  },
+  {
+    "id": 20,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      109
+    ],
+    "exact_script_text": "Bangkoka u Tajlandu",
+    "text_translated": "Bangkoka u Tajlandu",
+    "notes": ""
+  },
+  {
+    "id": 21,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      113
+    ],
+    "exact_script_text": "120 kilograma",
+    "text_translated": "120 kilograma",
+    "notes": ""
+  },
+  {
+    "id": 22,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      123
+    ],
+    "exact_script_text": "Do 1938.",
+    "text_translated": "Do 1938.",
+    "notes": ""
+  },
+  {
+    "id": 23,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      141
+    ],
+    "exact_script_text": "polinezijski doseljenici",
+    "text_translated": "polinezijski doseljenici",
+    "notes": ""
+  },
+  {
+    "id": 24,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      176
+    ],
+    "exact_script_text": "Martha’s Vineyard",
+    "text_translated": "Martha’s Vineyard",
+    "notes": ""
+  },
+  {
+    "id": 25,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      181
+    ],
+    "exact_script_text": "„Tutnjava Ben“",
+    "text_translated": "„Tutnjava Ben“",
+    "notes": ""
+  },
+  {
+    "id": 26,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      191
+    ],
+    "exact_script_text": "jugoistočne Australije",
+    "text_translated": "jugoistočne Australije",
+    "notes": ""
+  }
+]
+```

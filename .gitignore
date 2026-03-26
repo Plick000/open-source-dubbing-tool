@@ -1,0 +1,58 @@
+cat > .gitignore << 'EOF'
+# Python
+venv/
+.venv/
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+*.log
+
+# Env files
+.env
+.env.*
+
+# Node
+node_modules/
+npm-debug.log*
+
+# OS / editor
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+
+# Build / cache
+dist/
+build/
+.cache/
+tmp/
+temp/
+
+# Large generated/project outputs
+output/
+outputs/
+exports/
+rendered/
+logs/
+
+# Media / heavy assets
+*.mp4
+*.mov
+*.mkv
+*.avi
+*.wav
+*.mp3
+*.flac
+*.zip
+*.7z
+*.rar
+
+# Model / binary / large artifacts
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+*.onnx
+*.bin
+EOF

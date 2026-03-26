@@ -1,0 +1,22 @@
+Gemini CLI Error. Failed to save project registry to /mnt/c/__tools/gemini/.gemini/projects.json: Error: ENOENT: no such file or directory, rename '/mnt/c/__tools/gemini/.gemini/projects.json.tmp' -> '/mnt/c/__tools/gemini/.gemini/projects.json'
+    at async Object.rename (node:internal/fs/promises:777:10)
+    at async ProjectRegistry.save (file:///home/vvruntime/.npm-global/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/config/projectRegistry.js:73:13)
+    at async ProjectRegistry.getShortId (file:///home/vvruntime/.npm-global/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/config/projectRegistry.js:95:13)
+    at async file:///home/vvruntime/.npm-global/lib/node_modules/@google/gemini-cli/node_modules/@google/gemini-cli-core/dist/src/config/storage.js:167:38
+    at async cleanupToolOutputFiles (file:///home/vvruntime/.npm-global/lib/node_modules/@google/gemini-cli/dist/src/utils/sessionCleanup.js:268:13)
+    at async Promise.all (index 1)
+    at async main (file:///home/vvruntime/.npm-global/lib/node_modules/@google/gemini-cli/dist/src/gemini.js:215:5) {
+  errno: -2,
+  code: 'ENOENT',
+  syscall: 'rename',
+  path: '/mnt/c/__tools/gemini/.gemini/projects.json.tmp',
+  dest: '/mnt/c/__tools/gemini/.gemini/projects.json'
+}
+{
+  "session_id": "95bb3aad-6539-40a6-8f2d-2ee1308ca70e",
+  "error": {
+    "type": "Error",
+    "message": "Please set an Auth method in your /mnt/c/__tools/gemini/.gemini/settings.json or specify one of the following environment variables before running: GEMINI_API_KEY, GOOGLE_GENAI_USE_VERTEXAI, GOOGLE_GENAI_USE_GCA",
+    "code": 41
+  }
+}

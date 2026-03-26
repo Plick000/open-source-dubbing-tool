@@ -1,0 +1,3 @@
+/home/viralverse/.npm-global/lib
+└── @google/gemini-cli@0.25.2
+

@@ -1,0 +1,342 @@
+```json
+[
+  {
+    "id": 1,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      25
+    ],
+    "exact_script_text": "300 milijuna",
+    "text_translated": "300000000",
+    "notes": ""
+  },
+  {
+    "id": 2,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      52
+    ],
+    "exact_script_text": "Kongo",
+    "text_translated": "Kongo",
+    "notes": ""
+  },
+  {
+    "id": 3,
+    "matched": false,
+    "source_chunk_numbers_dubbed": [],
+    "exact_script_text": "empty",
+    "text_translated": "empty",
+    "notes": "not_found_in_candidates"
+  },
+  {
+    "id": 4,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      74
+    ],
+    "exact_script_text": "Baka",
+    "text_translated": "Baka",
+    "notes": ""
+  },
+  {
+    "id": 5,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      86
+    ],
+    "exact_script_text": "šume Aturi",
+    "text_translated": "šume Aturi",
+    "notes": ""
+  },
+  {
+    "id": 6,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      74
+    ],
+    "exact_script_text": "Embuti",
+    "text_translated": "Embuti",
+    "notes": ""
+  },
+  {
+    "id": 7,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      115
+    ],
+    "exact_script_text": "onesposobiti plijen bez ubijanja.",
+    "text_translated": "onesposobiti plijen bez ubijanja.",
+    "notes": ""
+  },
+  {
+    "id": 8,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      116
+    ],
+    "exact_script_text": "Održati ga svježim.",
+    "text_translated": "Održati ga svježim.",
+    "notes": ""
+  },
+  {
+    "id": 9,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      128
+    ],
+    "exact_script_text": "Pauk nije trebao gristi.",
+    "text_translated": "Pauk nije trebao gristi.",
+    "notes": ""
+  },
+  {
+    "id": 10,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      129
+    ],
+    "exact_script_text": "Mreža je započinjala obrok.",
+    "text_translated": "Mreža je započinjala obrok.",
+    "notes": ""
+  },
+  {
+    "id": 11,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      142
+    ],
+    "exact_script_text": "Stotine tijela zbijenih unutar tunela",
+    "text_translated": "Stotine tijela zbijenih unutar tunela",
+    "notes": ""
+  },
+  {
+    "id": 12,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      142
+    ],
+    "exact_script_text": "isijavale su toplinu poput peći.",
+    "text_translated": "isijavale su toplinu poput peći.",
+    "notes": ""
+  },
+  {
+    "id": 13,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      155
+    ],
+    "exact_script_text": "Šuma iznad njih služila je kao mreža za detekciju.",
+    "text_translated": "Šuma iznad njih služila je kao mreža za detekciju.",
+    "notes": ""
+  },
+  {
+    "id": 14,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      156
+    ],
+    "exact_script_text": "Mreže na stazama djelovale su poput poteznih žica.",
+    "text_translated": "Mreže na stazama djelovale su poput poteznih žica.",
+    "notes": ""
+  },
+  {
+    "id": 15,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      167
+    ],
+    "exact_script_text": "tvrdi diskovi obrisani.",
+    "text_translated": "tvrdi diskovi obrisani.",
+    "notes": ""
+  },
+  {
+    "id": 16,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      168
+    ],
+    "exact_script_text": "Slike su izbrisane.",
+    "text_translated": "Slike su izbrisane.",
+    "notes": ""
+  },
+  {
+    "id": 17,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      168
+    ],
+    "exact_script_text": "Videozapisi su nestali.",
+    "text_translated": "Videozapisi su nestali.",
+    "notes": ""
+  },
+  {
+    "id": 18,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      178
+    ],
+    "exact_script_text": "ako mineralizirani egzoskelet,",
+    "text_translated": "ako mineralizirani egzoskelet,",
+    "notes": ""
+  },
+  {
+    "id": 19,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      178
+    ],
+    "exact_script_text": "otpornost na starenje,",
+    "text_translated": "otpornost na starenje,",
+    "notes": ""
+  },
+  {
+    "id": 20,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      179
+    ],
+    "exact_script_text": "i prapovijesni genetski jaz uistinu postoje",
+    "text_translated": "i prapovijesni genetski jaz uistinu postoje",
+    "notes": ""
+  },
+  {
+    "id": 21,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      7
+    ],
+    "exact_script_text": "genetskog materijala „jubi“",
+    "text_translated": "genetskog materijala „jubi“",
+    "notes": ""
+  },
+  {
+    "id": 22,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      14
+    ],
+    "exact_script_text": "granice Grčke i Albanije.",
+    "text_translated": "granice Grčke i Albanije.",
+    "notes": ""
+  },
+  {
+    "id": 23,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      16
+    ],
+    "exact_script_text": "No, ovdje se nalazio velegrad mreža —",
+    "text_translated": "No, ovdje se nalazio velegrad mreža —",
+    "notes": ""
+  },
+  {
+    "id": 24,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      17
+    ],
+    "exact_script_text": "gustih, slojevitih, industrijskih razmjera.",
+    "text_translated": "gustih, slojevitih, industrijskih razmjera.",
+    "notes": ""
+  },
+  {
+    "id": 25,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      40
+    ],
+    "exact_script_text": "Precizno strukturno rješenje koje omogućuje",
+    "text_translated": "Precizno strukturno rješenje koje omogućuje",
+    "notes": ""
+  },
+  {
+    "id": 26,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      40
+    ],
+    "exact_script_text": "raspon nogu veći od 1,2 metra.",
+    "text_translated": "raspon nogu veći od 1.2 metra.",
+    "notes": ""
+  },
+  {
+    "id": 27,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      43
+    ],
+    "exact_script_text": "Jedinke mogu živjeti pedeset godina ili više —",
+    "text_translated": "Jedinke mogu živjeti 50 godina ili više —",
+    "notes": ""
+  },
+  {
+    "id": 28,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      56
+    ],
+    "exact_script_text": "druga je to najveća prašuma na Zemlji.",
+    "text_translated": "druga je to najveća prašuma na Zemlji.",
+    "notes": ""
+  },
+  {
+    "id": 29,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      77
+    ],
+    "exact_script_text": "Govore o lovu u predjelima",
+    "text_translated": "Govore o lovu u predjelima",
+    "notes": ""
+  },
+  {
+    "id": 30,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      77
+    ],
+    "exact_script_text": "prožetima mirisom truleži i slatkim mirisom cvijeća.",
+    "text_translated": "prožetima mirisom truleži i slatkim mirisom cvijeća.",
+    "notes": ""
+  },
+  {
+    "id": 31,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      81
+    ],
+    "exact_script_text": "Njegovih osam očiju detektira toplinske promjene.",
+    "text_translated": "Njegovih 8 očiju detektira toplinske promjene.",
+    "notes": ""
+  },
+  {
+    "id": 32,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      82
+    ],
+    "exact_script_text": "Njegove noge osjete korake s nevjerojatnih udaljenosti.",
+    "text_translated": "Njegove noge osjete korake s nevjerojatnih udaljenosti.",
+    "notes": ""
+  },
+  {
+    "id": 33,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      95
+    ],
+    "exact_script_text": "Do jutra, trojica su muškaraca nestala.",
+    "text_translated": "Do jutra, 3 su muškaraca nestala.",
+    "notes": ""
+  },
+  {
+    "id": 34,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      104
+    ],
+    "exact_script_text": "Službenici su to proglasili bunilom uzrokovanom groznicom.",
+    "text_translated": "Službenici su to proglasili bunilom uzrokovanom groznicom.",
+    "notes": ""
+  }
+]
+```

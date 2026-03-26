@@ -1,0 +1,11 @@
+{
+  "status": false,
+  "ts": "Thu Feb 12 2026 12:34:34 GMT+0500",
+  "error": "Error: Config file not found: \\\\wsl.localhost\\Ubuntu-22.04\\home\\vvruntime\\viralverse-dubbing-automation\\Javascript/run_config.json",
+  "output_mp4": "",
+  "job_id": null,
+  "queued_confirmed": false,
+  "queued_attempts": null,
+  "ame_running": false,
+  "preset_epr": ""
+}

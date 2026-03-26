@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ViralVerse + ElevenLabs Studio | Configurator</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Fira+Code:wght@400;500;600&display=swap');
+        body { font-family: 'Inter', sans-serif; background-color: #fcfcfd; }
+        .custom-scrollbar::-webkit-scrollbar { width: 5px; }
+        .custom-scrollbar::-webkit-scrollbar-thumb { background: #e5e7eb; border-radius: 10px; }
+        .voice-card { transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1); border: 2px solid transparent; cursor: pointer; }
+        .voice-card.active { border-color: #000; background: #f8fafc; ring: 2px solid black; }
+        input[type=range] { accent-color: black; }
+
+        /* Terminal Styling */
+        #terminal { font-family: 'Fira Code', monospace; background: #111; color: #10b981; }
+
+        /* Dropdown Animations */
+        .dropdown-enter { opacity: 0; transform: translateY(-10px); }
+        .dropdown-enter-active { opacity: 1; transform: translateY(0); transition: all 0.2s ease-out; }
+        .dropdown-exit-active { opacity: 0; transform: translateY(-10px); transition: all 0.15s ease-in; }
+        .dropdown-scrollbar::-webkit-scrollbar { width: 8px; }
+        .dropdown-scrollbar::-webkit-scrollbar-track { background: #f9fafb; border-radius: 10px; }
+        .dropdown-scrollbar::-webkit-scrollbar-thumb { background: #d1d5db; border-radius: 10px; }
+        .dropdown-scrollbar::-webkit-scrollbar-thumb:hover { background: #9ca3af; }
+    </style>
+</head>
+<body class="flex h-screen overflow-hidden text-[#1a1c1e]">
+
+    <aside class="w-72 bg-white border-r border-gray-100 flex flex-col p-6 space-y-8">
+        <div class="flex items-center space-x-3 px-2">
+            <div class="w-10 h-10 bg-black rounded-xl flex items-center justify-center shadow-lg">
+                <i class="fas fa-waveform text-white text-xl"></i>
+            </div>
+            <span class="font-bold text-2xl tracking-tight">ViralVerse Audio Studio</span>
+        </div>
+        <nav class="space-y-1">
+            <a href="#" class="flex items-center space-x-3 px-4 py-3 bg-gray-50 text-black rounded-xl font-semibold border border-gray-100">
+                <i class="fas fa-sliders-h"></i><span>Configurator</span>
+            </a>
+        </nav>
+    </aside>
+
+    <main class="flex-1 flex flex-col">
+        <header class="h-20 bg-white border-b border-gray-100 flex items-center justify-between px-10">
+            <div>
+                <h2 class="text-xl font-bold">Document Setup</h2>
+                <p class="text-xs text-gray-400">Leading numbers will be removed automatically</p>
+            </div>
+            <div class="flex items-center space-x-3">
+                <div id="dlGroup" class="hidden flex items-center space-x-2">
+                    <a id="pdfLink" href="#" class="bg-blue-600 text-white px-5 py-2 rounded-full font-bold text-xs shadow-md"><i class="fas fa-file-pdf mr-2"></i>PDF</a>
+                    <a id="zipLink" href="#" class="bg-green-600 text-white px-5 py-2 rounded-full font-bold text-xs shadow-md"><i class="fas fa-file-archive mr-2"></i>Download ZIP</a>
+                    <a id="chunksLink" href="#" class="bg-purple-600 text-white px-5 py-2 rounded-full font-bold text-xs shadow-md">
+                        <i class="fas fa-list mr-2"></i>Chunks TXT
+                    </a>
+                </div>
+                <button onclick="saveAndSync('start')" id="actionBtn" class="bg-black text-white px-8 py-2.5 rounded-full font-bold hover:scale-105 transition shadow-lg">
+                    Save & Sync
+                </button>
+            </div>
+        </header>
+
+        <div class="flex-1 overflow-y-auto p-10 space-y-8 custom-scrollbar">
+            <section class="max-w-4xl">
+                <label class="text-xs font-bold text-gray-400 uppercase tracking-widest mb-3 block">Google Drive Link</label>
+                <div class="relative">
+                    <input
+                        type="text"
+                        id="docs_link"
+                        placeholder="Paste link here..."
+                        class="w-full p-4 pl-12 border-2 border-gray-200 rounded-2xl outline-none focus:border-black focus:shadow-lg text-lg shadow-sm transition-all duration-300 hover:shadow-md"
+                    >
+                    <svg class="absolute left-4 top-1/2 -translate-y-1/2 w-5 h-5 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13.828 10.172a4 4 0 00-5.656 0l-4 4a4 4 0 105.656 5.656l1.102-1.101m-.758-4.899a4 4 0 005.656 0l4-4a4 4 0 00-5.656-5.656l-1.1 1.1"/>
+                    </svg>
+                </div>
+            </section>
+
+            <div class="grid grid-cols-12 gap-8 max-w-6xl">
+                <div class="col-span-12 lg:col-span-8 space-y-4">
+                    <div class="flex items-center justify-between">
+                        <h3 class="text-xs font-bold text-gray-400 uppercase tracking-widest">Select Voice</h3>
+                        <div class="relative">
+                            <i class="fas fa-search absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-xs"></i>
+                            <input type="text" id="vSearch" onkeyup="filterVoices()" placeholder="Search voices..." class="pl-10 pr-4 py-2 bg-gray-100 rounded-full text-xs outline-none focus:ring-1 focus:ring-black">
+                        </div>
+                    </div>
+                    <div id="vGrid" class="grid grid-cols-1 md:grid-cols-2 gap-4 h-[400px] overflow-y-auto pr-4 custom-scrollbar">
+                        {% for v in voices %}
+                        <div class="voice-card bg-white border border-gray-100 p-5 rounded-2xl flex items-center justify-between shadow-sm" onclick="selectVoice('{{v.voice_id}}', '{{v.name}}', this)">
+                            <div class="flex items-center space-x-4">
+                                <div class="w-10 h-10 rounded-xl bg-gray-50 flex items-center justify-center font-bold text-gray-400">{{v.name[0]}}</div>
+                                <span class="font-bold text-sm">{{v.name}}</span>
+                            </div>
+                            <button onclick="playPreview('{{v.preview_url}}', event)" class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center hover:bg-black hover:text-white transition">
+                                <i class="fas fa-play text-[10px]"></i>
+                            </button>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+
+                <div class="col-span-12 lg:col-span-4 space-y-6">
+                    <div class="bg-white border border-gray-100 rounded-3xl p-8 shadow-sm space-y-6">
+                        <div class="relative">
+                            <label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block mb-4">Model</label>
+
+                            <button id="dropdownButton" type="button" class="w-full p-4 bg-gray-50 border border-gray-100 rounded-2xl outline-none font-bold text-sm text-left flex items-center justify-between hover:border-gray-200 focus:border-gray-300 transition-all duration-200">
+                                <span id="selectedModelText" class="text-gray-700">Select Model</span>
+                                <svg id="dropdownIcon" class="w-5 h-5 text-gray-400 transition-transform duration-200" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/>
+                                </svg>
+                            </button>
+
+                            <div id="dropdownMenu" class="hidden absolute z-50 w-full mt-2 bg-white border border-gray-100 rounded-2xl shadow-xl overflow-hidden">
+                                <div class="p-3 border-b border-gray-100">
+                                    <div class="relative">
+                                        <input
+                                            type="text"
+                                            id="modelSearchInput"
+                                            placeholder="Search models..."
+                                            class="w-full p-3 pl-10 bg-gray-50 border border-gray-100 rounded-xl outline-none text-sm focus:border-gray-300 transition-all duration-200"
+                                        >
+                                        <svg class="absolute left-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"/>
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <div id="modelOptionsList" class="max-h-64 overflow-y-auto dropdown-scrollbar">
+                                    {% for m in models %}
+                                    <div class="model-option p-4 hover:bg-gray-50 cursor-pointer transition-colors duration-150 flex items-center justify-between" data-value="{{m.model_id}}" data-name="{{m.name}}">
+                                        <div class="flex items-center space-x-3">
+                                            <div class="w-8 h-8 bg-gray-100 rounded-lg flex items-center justify-center">
+                                                <i class="fas fa-microchip text-gray-600 text-xs"></i>
+                                            </div>
+                                            <span class="font-bold text-sm text-gray-700">{{m.name}}</span>
+                                        </div>
+                                        <span class="text-xs text-gray-400 font-mono">{{m.model_id}}</span>
+                                    </div>
+                                    {% endfor %}
+                                </div>
+                            </div>
+
+                            <select id="model_id" class="hidden">
+                                {% for m in models %}
+                                <option value="{{m.model_id}}">{{m.name}}</option>
+                                {% endfor %}
+                            </select>
+                        </div>
+
+                        <div class="space-y-6">
+                            <label class="text-[10px] font-bold text-gray-400 uppercase tracking-widest block">Voice Settings</label>
+                            <div class="space-y-2">
+                                <div class="flex justify-between font-bold text-[10px]"><span>Stability</span><span id="st_val">50%</span></div>
+                                <input type="range" id="stability" min="0" max="1" step="0.01" value="0.5" class="w-full" oninput="document.getElementById('st_val').innerText = Math.round(this.value*100)+'%'">
+                            </div>
+                            <div class="space-y-2">
+                                <div class="flex justify-between font-bold text-[10px]"><span>Similarity</span><span id="si_val">75%</span></div>
+                                <input type="range" id="similarity_boost" min="0" max="1" step="0.01" value="0.75" class="w-full" oninput="document.getElementById('si_val').innerText = Math.round(this.value*100)+'%'">
+                            </div>
+                        </div>
+                    </div>
+
+                    <div id="terminal" class="rounded-3xl p-6 h-48 overflow-y-auto text-[11px] custom-scrollbar shadow-inner">
+                        <div class="text-gray-500 italic mb-2">// Ready for sync...</div>
+                        <div id="logOutput"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- TAB SELECTION MODAL -->
+    <div id="tabModal" class="hidden fixed inset-0 z-[9999] flex items-center justify-center bg-black/60">
+        <div class="w-full max-w-lg bg-white rounded-3xl shadow-2xl p-6 border border-gray-100">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h3 class="text-lg font-bold">Select Tab</h3>
+                    <p class="text-xs text-gray-500">Multiple tabs detected. Choose one to continue.</p>
+                </div>
+                <div class="w-10 h-10 rounded-2xl bg-gray-50 flex items-center justify-center">
+                    <i class="fas fa-table text-gray-700"></i>
+                </div>
+            </div>
+
+            <div id="tabList" class="space-y-2 max-h-72 overflow-y-auto custom-scrollbar pr-1"></div>
+
+            <div class="mt-5 flex items-center justify-end space-x-2">
+                <button onclick="cancelTabSelection()" class="px-5 py-2 rounded-full bg-gray-100 text-gray-800 font-bold text-xs hover:bg-gray-200 transition">
+                    Cancel
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- CONTINUE MODAL -->
+    <div id="continueModal" class="hidden fixed inset-0 z-[9999] flex items-center justify-center bg-black/60">
+        <div class="w-full max-w-lg bg-white rounded-3xl shadow-2xl p-6 border border-gray-100">
+            <div class="flex items-center justify-between mb-4">
+                <div>
+                    <h3 class="text-lg font-bold">Downloads Ready</h3>
+                    <p class="text-xs text-gray-500">PDF + TXT downloaded. Continue to run the pipeline?</p>
+                </div>
+                <div class="w-10 h-10 rounded-2xl bg-gray-50 flex items-center justify-center">
+                    <i class="fas fa-file-arrow-down text-gray-700"></i>
+                </div>
+            </div>
+
+            <div class="space-y-2 mb-5">
+                <a id="modalPdfLink" href="#" class="w-full inline-flex items-center justify-between p-4 rounded-2xl border border-gray-100 hover:border-black hover:bg-gray-50 transition">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-xl bg-gray-100 flex items-center justify-center">
+                            <i class="fas fa-file-pdf text-gray-700 text-xs"></i>
+                        </div>
+                        <div class="font-bold text-sm text-gray-900">Download PDF</div>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+
+                <a id="modalTxtLink" href="#" class="w-full inline-flex items-center justify-between p-4 rounded-2xl border border-gray-100 hover:border-black hover:bg-gray-50 transition">
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-xl bg-gray-100 flex items-center justify-center">
+                            <i class="fas fa-file-lines text-gray-700 text-xs"></i>
+                        </div>
+                        <div class="font-bold text-sm text-gray-900">Download TXT</div>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                </a>
+            </div>
+
+            <div class="flex items-center justify-end space-x-2">
+                <button onclick="cancelContinue()" class="px-5 py-2 rounded-full bg-gray-100 text-gray-800 font-bold text-xs hover:bg-gray-200 transition">
+                    Cancel
+                </button>
+                <button onclick="confirmContinue()" class="px-6 py-2 rounded-full bg-black text-white font-bold text-xs hover:scale-105 transition">
+                    Continue
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <audio id="audioPlayer" class="hidden"></audio>
+
+    <script>
+        let selectedId = "";
+        let selectedName = "";
+
+        // same field used for sheet gid OR doc tabId
+        let selectedSheetGid = null;
+
+        // continue urls
+        let pendingPdfUrl = null;
+        let pendingTxtUrl = null;
+
+        const dropdownButton = document.getElementById('dropdownButton');
+        const dropdownMenu = document.getElementById('dropdownMenu');
+        const dropdownIcon = document.getElementById('dropdownIcon');
+        const selectedModelText = document.getElementById('selectedModelText');
+        const modelSearchInput = document.getElementById('modelSearchInput');
+        const modelOptionsList = document.getElementById('modelOptionsList');
+        const hiddenModelSelect = document.getElementById('model_id');
+        let isDropdownOpen = false;
+
+        window.addEventListener('DOMContentLoaded', () => {
+            const firstOption = modelOptionsList.querySelector('.model-option');
+            if (firstOption) {
+                const value = firstOption.dataset.value;
+                const name = firstOption.dataset.name;
+                selectedModelText.textContent = name;
+                hiddenModelSelect.value = value;
+            }
+        });
+
+        dropdownButton.addEventListener('click', (e) => {
+            e.stopPropagation();
+            toggleDropdown();
+        });
+
+        function toggleDropdown() {
+            isDropdownOpen = !isDropdownOpen;
+            if (isDropdownOpen) {
+                dropdownMenu.classList.remove('hidden');
+                dropdownMenu.classList.add('dropdown-enter');
+                dropdownIcon.style.transform = 'rotate(180deg)';
+                setTimeout(() => {
+                    dropdownMenu.classList.add('dropdown-enter-active');
+                    dropdownMenu.classList.remove('dropdown-enter');
+                }, 10);
+                modelSearchInput.focus();
+            } else {
+                dropdownMenu.classList.add('dropdown-exit-active');
+                dropdownIcon.style.transform = 'rotate(0deg)';
+                setTimeout(() => {
+                    dropdownMenu.classList.add('hidden');
+                    dropdownMenu.classList.remove('dropdown-exit-active');
+                    modelSearchInput.value = '';
+                    filterModelOptions('');
+                }, 150);
+            }
+        }
+
+        document.addEventListener('click', (e) => {
+            if (!dropdownButton.contains(e.target) && !dropdownMenu.contains(e.target)) {
+                if (isDropdownOpen) toggleDropdown();
+            }
+        });
+
+        modelOptionsList.addEventListener('click', (e) => {
+            const optionItem = e.target.closest('.model-option');
+            if (optionItem) {
+                const value = optionItem.dataset.value;
+                const name = optionItem.dataset.name;
+                selectedModelText.textContent = name;
+                hiddenModelSelect.value = value;
+                toggleDropdown();
+            }
+        });
+
+        modelSearchInput.addEventListener('input', (e) => {
+            filterModelOptions(e.target.value.toLowerCase());
+        });
+
+        function filterModelOptions(searchTerm) {
+            const options = modelOptionsList.querySelectorAll('.model-option');
+            options.forEach(option => {
+                const text = option.textContent.toLowerCase();
+                option.style.display = text.includes(searchTerm) ? 'flex' : 'none';
+            });
+        }
+
+        dropdownMenu.addEventListener('click', (e) => {
+            e.stopPropagation();
+        });
+
+        function addLog(text, isError = false) {
+            const log = document.getElementById('logOutput');
+            const div = document.createElement('div');
+            div.className = isError ? "text-red-400 mb-1" : "text-emerald-400 mb-1";
+
+            const icon = document.createElement('i');
+            icon.className = 'fas mr-2';
+
+            if (text.includes('Starting Pipeline')) icon.classList.add('fa-rocket');
+            else if (text.includes('Google Drive')) icon.classList.add('fa-folder');
+            else if (text.includes('Select Tab')) icon.classList.add('fa-table');
+            else if (text.includes('downloaded')) icon.classList.add('fa-file-arrow-down');
+            else if (text.includes('Continue')) icon.classList.add('fa-play');
+            else if (text.includes('Chunks')) icon.classList.add('fa-cube');
+            else if (text.includes('Audio')) icon.classList.add('fa-microphone');
+            else if (text.includes('Timestamps')) icon.classList.add('fa-clock');
+            else if (text.includes('FFmpeg') || text.includes('ZIP')) icon.classList.add('fa-scissors');
+            else if (text.includes('Success')) icon.classList.add('fa-check-circle');
+            else if (isError) icon.classList.add('fa-exclamation-triangle');
+            else icon.classList.add('fa-info-circle');
+
+            div.innerHTML = `<span class="text-gray-600 mr-2">${new Date().toLocaleTimeString()}</span>`;
+            div.appendChild(icon);
+            div.innerHTML += text;
+            log.appendChild(div);
+            document.getElementById('terminal').scrollTop = document.getElementById('terminal').scrollHeight;
+        }
+
+        function selectVoice(id, name, el) {
+            document.querySelectorAll('.voice-card').forEach(c => c.classList.remove('active'));
+            el.classList.add('active');
+            selectedId = id;
+            selectedName = name;
+        }
+
+        function playPreview(url, e) {
+            e.stopPropagation();
+            if(!url || url === 'None') return;
+            const player = document.getElementById('audioPlayer');
+            player.src = url;
+            player.play();
+        }
+
+        function filterVoices() {
+            let filter = document.getElementById('vSearch').value.toLowerCase();
+            document.querySelectorAll('.voice-card').forEach(card => {
+                card.style.display = card.innerText.toLowerCase().includes(filter) ? "flex" : "none";
+            });
+        }
+
+        // -----------------------
+        // TAB MODAL
+        // -----------------------
+        function showTabModal(tabs) {
+            const modal = document.getElementById('tabModal');
+            const list = document.getElementById('tabList');
+            list.innerHTML = "";
+
+            tabs.forEach(t => {
+                const btn = document.createElement('button');
+                btn.className = "w-full text-left p-4 rounded-2xl border border-gray-100 hover:border-black hover:bg-gray-50 transition flex items-center justify-between";
+                btn.innerHTML = `
+                    <div class="flex items-center space-x-3">
+                        <div class="w-9 h-9 rounded-xl bg-gray-100 flex items-center justify-center">
+                            <i class="fas fa-sheet-plastic text-gray-700 text-xs"></i>
+                        </div>
+                        <div>
+                            <div class="font-bold text-sm text-gray-900">${t.title}</div>
+                            <div class="text-[10px] text-gray-400 font-mono">id: ${t.gid}</div>
+                        </div>
+                    </div>
+                    <i class="fas fa-chevron-right text-gray-400"></i>
+                `;
+                btn.onclick = () => {
+                    selectedSheetGid = t.gid;
+                    hideTabModal();
+                    saveAndSync('after_tab');
+                };
+                list.appendChild(btn);
+            });
+
+            modal.classList.remove('hidden');
+        }
+
+        function hideTabModal() {
+            document.getElementById('tabModal').classList.add('hidden');
+        }
+
+        function cancelTabSelection() {
+            selectedSheetGid = null;
+            hideTabModal();
+
+            const btn = document.getElementById('actionBtn');
+            btn.innerText = "Save & Sync";
+            btn.disabled = false;
+            btn.style.opacity = "1";
+
+            addLog("Tab selection cancelled.", true);
+        }
+
+        // -----------------------
+        // CONTINUE MODAL
+        // -----------------------
+        function showContinueModal(pdfUrl, txtUrl) {
+            pendingPdfUrl = pdfUrl;
+            pendingTxtUrl = txtUrl;
+
+            document.getElementById('modalPdfLink').href = pdfUrl || "#";
+            document.getElementById('modalTxtLink').href = txtUrl || "#";
+
+            document.getElementById('continueModal').classList.remove('hidden');
+        }
+
+        function hideContinueModal() {
+            document.getElementById('continueModal').classList.add('hidden');
+        }
+
+        function cancelContinue() {
+            hideContinueModal();
+
+            const btn = document.getElementById('actionBtn');
+            btn.innerText = "Save & Sync";
+            btn.disabled = false;
+            btn.style.opacity = "1";
+
+            addLog("Continue cancelled. Pipeline stopped.", true);
+        }
+
+        function confirmContinue() {
+            hideContinueModal();
+            addLog("Continue confirmed. Running pipeline...");
+            saveAndSync('after_continue');
+        }
+
+        // -----------------------
+        // MAIN ACTION
+        // -----------------------
+        async function saveAndSync(mode) {
+            const docLink = document.getElementById('docs_link').value;
+            if(!docLink || !selectedId) return alert("Select voice and paste link!");
+
+            const btn = document.getElementById('actionBtn');
+
+            // Only clear logs for a fresh start
+            if (mode === 'start') {
+                document.getElementById('logOutput').innerHTML = "";
+                addLog("Starting Pipeline...");
+                addLog("Connecting to Google Drive...");
+                selectedSheetGid = null;
+                pendingPdfUrl = null;
+                pendingTxtUrl = null;
+            }
+
+            btn.innerText = "Syncing...";
+            btn.disabled = true;
+            btn.style.opacity = "0.5";
+
+            const payload = {
+                docs_link: docLink,
+                voice_id: selectedId,
+                voice_name: selectedName,
+                model_id: document.getElementById('model_id').value,
+                settings: {
+                    stability: parseFloat(document.getElementById('stability').value),
+                    similarity_boost: parseFloat(document.getElementById('similarity_boost').value)
+                },
+                sheet_gid: selectedSheetGid,
+                continue_pipeline: (mode === 'after_continue')
+            };
+
+            try {
+                const response = await fetch('/save_config', {
+                    method: 'POST',
+                    headers: {'Content-Type': 'application/json'},
+                    body: JSON.stringify(payload)
+                });
+
+                const res = await response.json();
+
+                if (res.status === "need_tab") {
+                    addLog("Select Tab to continue.");
+                    showTabModal(res.tabs || []);
+                    return;
+                }
+
+                if (res.status === "need_continue") {
+                    addLog("PDF + TXT downloaded. Waiting for Continue...");
+                    showContinueModal(res.pdf_url, res.script_url);
+                    return;
+                }
+
+                if (res.status === "success") {
+                    addLog("Chunks created successfully.");
+                    addLog("Audio generation finished.");
+                    addLog("Timestamps calculated.");
+                    addLog("FFmpeg slicing and ZIP complete!");
+                    addLog("Success! Files are ready.");
+                    addLog("");
+
+                    document.getElementById('pdfLink').href = res.pdf_url;
+                    document.getElementById('chunksLink').href = res.chunks_url;
+                    document.getElementById('zipLink').href = res.zip_url;
+                    document.getElementById('dlGroup').classList.remove('hidden');
+                } else {
+                    addLog(`ERROR: ${res.message}`, true);
+                }
+
+            } catch (e) {
+                addLog("Critical Error during fetch.", true);
+            } finally {
+                // If any modal is open, keep button disabled
+                const tabOpen = !document.getElementById('tabModal').classList.contains('hidden');
+                const contOpen = !document.getElementById('continueModal').classList.contains('hidden');
+
+                if (!tabOpen && !contOpen) {
+                    btn.innerText = "Save & Sync";
+                    btn.disabled = false;
+                    btn.style.opacity = "1";
+                }
+            }
+        }
+    </script>
+</body>
+</html>

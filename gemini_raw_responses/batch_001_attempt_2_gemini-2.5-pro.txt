@@ -1,0 +1,64 @@
+```json
+[
+  {
+    "id": 1,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      5
+    ],
+    "exact_script_text": "komunita která nikam nepatřila",
+    "text_translated": "komunita která nikam nepatřila",
+    "notes": "wrapper_stripped"
+  },
+  {
+    "id": 2,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      25
+    ],
+    "exact_script_text": "mýty které se staly štíty",
+    "text_translated": "mýty které se staly štíty",
+    "notes": "wrapper_stripped"
+  },
+  {
+    "id": 3,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      49
+    ],
+    "exact_script_text": "svět který si vynutil proměnu",
+    "text_translated": "svět který si vynutil proměnu",
+    "notes": "wrapper_stripped"
+  },
+  {
+    "id": 4,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      71
+    ],
+    "exact_script_text": "když promluvila krev",
+    "text_translated": "když promluvila krev",
+    "notes": "wrapper_stripped"
+  },
+  {
+    "id": 5,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      97
+    ],
+    "exact_script_text": "pravda v soudní síni",
+    "text_translated": "pravda v soudní síni",
+    "notes": "wrapper_stripped"
+  },
+  {
+    "id": 6,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      117
+    ],
+    "exact_script_text": "přepisování amerického příběhu",
+    "text_translated": "přepisování amerického příběhu",
+    "notes": "wrapper_stripped"
+  }
+]
+```

@@ -1,0 +1,304 @@
+```json
+[
+  {
+    "id": 1,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      7
+    ],
+    "exact_script_text": "Číslo 15. Dům protipovodňové bariéry, Nizozemsko.",
+    "text_translated": "Číslo 15. Dům protipovodňové bariéry, Nizozemsko.",
+    "notes": ""
+  },
+  {
+    "id": 2,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      19
+    ],
+    "exact_script_text": "Číslo 14. Earthship Biotecture, New Mexico.",
+    "text_translated": "Číslo 14. Earthship Biotecture, New Mexico.",
+    "notes": ""
+  },
+  {
+    "id": 3,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      32
+    ],
+    "exact_script_text": "Číslo 13. Malator House, Pembrokeshire, Wales.",
+    "text_translated": "Číslo 13. Malator House, Pembrokeshire, Wales.",
+    "notes": ""
+  },
+  {
+    "id": 4,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      43
+    ],
+    "exact_script_text": "Číslo 12. Villa Vals, Switzerland.",
+    "text_translated": "Číslo 12. Villa Vals, Switzerland.",
+    "notes": ""
+  },
+  {
+    "id": 5,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      55
+    ],
+    "exact_script_text": "Číslo 11. Matmata Troglodyte Homes, Tunisia.",
+    "text_translated": "Číslo 11. Matmata Troglodyte Homes, Tunisia.",
+    "notes": ""
+  },
+  {
+    "id": 6,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      68
+    ],
+    "exact_script_text": "Číslo 10. Dome Home, Florida.",
+    "text_translated": "Číslo 10. Dome Home, Florida.",
+    "notes": ""
+  },
+  {
+    "id": 7,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      81
+    ],
+    "exact_script_text": "Číslo 9. Taos Pueblo, New Mexico.",
+    "text_translated": "Číslo 9. Taos Pueblo, New Mexico.",
+    "notes": ""
+  },
+  {
+    "id": 8,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      96
+    ],
+    "exact_script_text": "Číslo 8. Rock-Hewn Churches, Ethiopia.",
+    "text_translated": "Číslo 8. Rock-Hewn Churches, Ethiopia.",
+    "notes": ""
+  },
+  {
+    "id": 9,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      108
+    ],
+    "exact_script_text": "Číslo 7. Guadix Cave Houses, Spain.",
+    "text_translated": "Číslo 7. Guadix Cave Houses, Spain.",
+    "notes": ""
+  },
+  {
+    "id": 10,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      121
+    ],
+    "exact_script_text": "Číslo 6. Casa Do Penedo, Portugal.",
+    "text_translated": "Číslo 6. Casa Do Penedo, Portugal.",
+    "notes": ""
+  },
+  {
+    "id": 11,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      130
+    ],
+    "exact_script_text": "Číslo 5. Tibetan Stone Houses, Himalayas.",
+    "text_translated": "Číslo 5. Tibetan Stone Houses, Himalayas.",
+    "notes": ""
+  },
+  {
+    "id": 12,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      139
+    ],
+    "exact_script_text": "Číslo 4. Islandské travnaté domy, Island.",
+    "text_translated": "Číslo 4. Islandské travnaté domy, Island.",
+    "notes": ""
+  },
+  {
+    "id": 13,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      152
+    ],
+    "exact_script_text": "Číslo 3. Fujian Tulou, Čína.",
+    "text_translated": "Číslo 3. Fujian Tulou, Čína.",
+    "notes": ""
+  },
+  {
+    "id": 14,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      167
+    ],
+    "exact_script_text": "Číslo 2. Superadobe kupole, Kalifornie.",
+    "text_translated": "Číslo 2. Superadobe kupole, Kalifornie.",
+    "notes": ""
+  },
+  {
+    "id": 15,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      184
+    ],
+    "exact_script_text": "Číslo 1. Trulli Alberobello Apulia, Italy.",
+    "text_translated": "Číslo 1. Trulli Alberobello Apulia, Italy.",
+    "notes": ""
+  },
+  {
+    "id": 16,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      10
+    ],
+    "exact_script_text": "Maasbommelu",
+    "text_translated": "Maasbommelu",
+    "notes": ""
+  },
+  {
+    "id": 17,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      21
+    ],
+    "exact_script_text": "Michael Reynolds",
+    "text_translated": "Michael Reynolds",
+    "notes": ""
+  },
+  {
+    "id": 18,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      34
+    ],
+    "exact_script_text": "1998",
+    "text_translated": "1998",
+    "notes": ""
+  },
+  {
+    "id": 19,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      45
+    ],
+    "exact_script_text": "SeARCH a Christian Müller",
+    "text_translated": "SeARCH a Christian Müller",
+    "notes": ""
+  },
+  {
+    "id": 20,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      65
+    ],
+    "exact_script_text": "Tatooine ve Star Wars",
+    "text_translated": "Tatooine ve Star Wars",
+    "notes": ""
+  },
+  {
+    "id": 21,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      70
+    ],
+    "exact_script_text": "Bobem Leem",
+    "text_translated": "Bobem Leem",
+    "notes": ""
+  },
+  {
+    "id": 22,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      73
+    ],
+    "exact_script_text": "Hurricane Ivan",
+    "text_translated": "Hurricane Ivan",
+    "notes": ""
+  },
+  {
+    "id": 23,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      86
+    ],
+    "exact_script_text": "1,000 let",
+    "text_translated": "1,000 let",
+    "notes": ""
+  },
+  {
+    "id": 24,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      98
+    ],
+    "exact_script_text": "Ve 12. a 13. století",
+    "text_translated": "Ve 12. a 13. století",
+    "notes": ""
+  },
+  {
+    "id": 25,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      111
+    ],
+    "exact_script_text": "15. století",
+    "text_translated": "15. století",
+    "notes": ""
+  },
+  {
+    "id": 26,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      123
+    ],
+    "exact_script_text": "1974",
+    "text_translated": "1974",
+    "notes": ""
+  },
+  {
+    "id": 27,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      143
+    ],
+    "exact_script_text": "subarktickému větru a chladu",
+    "text_translated": "subarktickému větru a chladu",
+    "notes": ""
+  },
+  {
+    "id": 28,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      154
+    ],
+    "exact_script_text": "14. století",
+    "text_translated": "14. století",
+    "notes": ""
+  },
+  {
+    "id": 29,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      168
+    ],
+    "exact_script_text": "Institut Cal-Earth",
+    "text_translated": "Institut Cal-Earth",
+    "notes": ""
+  },
+  {
+    "id": 30,
+    "matched": true,
+    "source_chunk_numbers_dubbed": [
+      193
+    ],
+    "exact_script_text": "Trullo Sovrano",
+    "text_translated": "Trullo Sovrano",
+    "notes": ""
+  }
+]
+```
