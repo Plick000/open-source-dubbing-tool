@@ -55,4 +55,9 @@ logs/
 *.safetensors
 *.onnx
 *.bin
-EOF
+EOF.env
+quota.env
+output/
+inputs/
+__pycache__/
+.vscode/
