@@ -32,7 +32,7 @@ IMAGE_DIGITS = 3  # 001, 002, ...
 IMAGE_EXT_CANDIDATES = [".jpg", ".jpeg", ".png", ".webp", ".avif", ".tiff", ".tif", ".bmp"]
 
 # DeepSeek API (PUT YOUR KEY HERE)
-DEEPSEEK_API_KEY = "sk-63ab536d8f1749c4a3fde69f84684018"  # <-- change this
+DEEPSEEK_API_KEY = ""  # <-- change this
 DEEPSEEK_MODEL = "deepseek-chat"    
 DEEPSEEK_BASE_URL = "https://api.deepseek.com"
 
